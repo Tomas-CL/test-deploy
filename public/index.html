@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina | Tomas-CL</title>
+    <style>
+       .rojo{
+            background: red;
+            border-radius: 20px;
+       }
+
+       .azul{
+            background: aqua;
+            border-radius: 20px;
+       }
+
+       #contenido1{
+            border: 1px solid black;
+       }
+    </style>
 </head>
 <body>
-    <h1>hola, mundo</h1>
-    <p>Esto va bien</p>
+    <div id="contenido1" class="rojo">
+        <p>contenido1</p>
+    </div>
+
+    <div id="contenido2" class="rojo">
+        <p>contenido2</p>
+    </div>
+
+    <div id="contenido3" class="azul">
+        <p>Las clases son compartidas</p>
+    </div>
+    <div id="contentido4">
+        <p id="contador"></p>
+        <button onclick="sumar()">Pulsar</button>
+    </div>
+    <script>
+        const contenido2 = document.querySelector("#contenido2")
+        const p1 = document.createElement("P")
+        const p2 = document.createElement("P")
+        p1.textContent="hola,mundo"
+        p2.textContent="kjak"
+        console.log(contenido2)
+        contenido2.appendChild(p1)
+        contenido2.appendChild(p2)
+
+        let contador = 0;
+        let contadorElement = document.querySelector("#contador")
+        contadorElement.textContent =contador;
+        
+        function sumar(){
+            contador++;
+            contadorElement.textContent =contador;
+        }
+
+        const frutas = ["manzana", "pera", "mango", "papaya"]
+        const listaElement = document.createElement("ul")
+        console.log("antes del loop")
+        for(let i = 0; i <= frutas.length; i++){
+            console.log(frutas[i])
+            const elementoLista = document.createElement("li")
+            elementoLista.textContent = frutas[i]
+            document.body.appendChild(elementoLista)
+            }
+        document.body.appendChild(listaElement)
+        console.log("Despues del loop")
+
+       
+
+
+        </script>
 </body>
 </html>
