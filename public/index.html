@@ -14,8 +14,8 @@
         justify-content: center;
         align-items: center;
         font-family: sans-serif;
-        background-color: black;
-        color: white;
+        background-color: #D14A36;
+        color: black;
     }
      button:hover {
         background-color: #555;
@@ -50,7 +50,7 @@
         
 
         let vidas = 3
-        displayVidas.textContent = "❤️".repeat(vidas)
+        displayVidas.textContent = "🖤".repeat(vidas)
 
         let record = localStorage.getItem("record") ||  0
         displeyRecord.textContent = "Récord: " + record
@@ -68,7 +68,7 @@
                 score = 0
                 vidas = 3
                 displeyScore.textContent = "Puntuación: " + score
-                displayVidas.textContent ="❤️".repeat(vidas)
+                displayVidas.textContent ="🖤".repeat(vidas)
                 displeyResultado.textContent = "¡Nuevo juego! Haz tu elección"
                 return
                 
@@ -107,7 +107,7 @@
             }else{
                 displeyResultado.textContent = "Has perdido"
                 vidas --
-                displayVidas.textContent = "❤️".repeat(vidas)
+                displayVidas.textContent = "🖤".repeat(vidas)
                 if(vidas <= 0){
                     displeyResultado.textContent = "Game Over"
                 }
